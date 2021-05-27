@@ -1,13 +1,14 @@
 import React from 'react';
+import { Scrollbars } from 'react-custom-scrollbars';
 import './App.css';
 
 import Header from './components/Header';
 
 function App() {
   return (
-    <div className="App">
+    <Scrollbars className="App">
       <Header />
-    </div>
+    </Scrollbars>
   );
 }
 
