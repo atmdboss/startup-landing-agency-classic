@@ -15,9 +15,9 @@ const Toolbar = () => {
     ******************************
     */
   const [isOpen, setIsOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 960);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1280);
   const handleResize = useCallback(() => {
-    return setIsMobile(window.innerWidth <= 960);
+    return setIsMobile(window.innerWidth < 1280);
   }, []);
 
   useEffect(() => {
