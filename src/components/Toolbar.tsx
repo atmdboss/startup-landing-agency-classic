@@ -1,11 +1,10 @@
 import React, { useCallback, useEffect, useState } from 'react';
 
-import StyledToolbar from '../styled/toolbar';
 import hamburgerIcon from '../assets/icons/hamburger.svg';
-import closeIcon from '../assets/icons/close.svg';
 import AppLogo from '../components/AppLogo';
+import Drawer from '../components/Drawer';
+import StyledToolbar from '../styled/toolbar';
 import StyledNavItem from '../styled/navItem';
-import StyledDrawer from '../styled/drawer';
 import StyledButton from '../styled/button';
 
 const Toolbar = () => {
@@ -48,24 +47,17 @@ const Toolbar = () => {
         <React.Fragment>
           <img src={hamburgerIcon} alt="hamburger icon" onClick={handleDrawerOpen} />
 
-          <StyledDrawer
-            open={isOpen}
-            height="100vh"
-            placement="left"
-            handler={<img className="close" src={closeIcon} alt="close icon" onClick={handleDrawerClose} />}
-          >
-            <AppLogo inDrawer onClick={handleDrawerClose} />
-
+          <Drawer open={isOpen} onClose={handleDrawerClose}>
             <StyledNavItem onClick={handleDrawerClose}>Home</StyledNavItem>
             <StyledNavItem onClick={handleDrawerClose}>Services</StyledNavItem>
             <StyledNavItem onClick={handleDrawerClose}>Pricing</StyledNavItem>
             <StyledNavItem onClick={handleDrawerClose}>Testimonials</StyledNavItem>
             <StyledNavItem onClick={handleDrawerClose}>News</StyledNavItem>
 
-            <StyledButton onClick={handleDrawerClose} dark fullWidth>
+            <StyledButton onClick={handleDrawerClose} dark>
               Purchase Now
             </StyledButton>
-          </StyledDrawer>
+          </Drawer>
         </React.Fragment>
       ) : (
         <React.Fragment>

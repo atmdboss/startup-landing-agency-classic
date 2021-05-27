@@ -6,3 +6,5 @@ export { LogoProps } from './appLogoTypes';
 export { SectionProps } from './sectionTypes';
 //@ts-ignore
 export { FeatureProps } from './featureTypes';
+//@ts-ignore
+export { DrawerProps } from './drawerTypes';
