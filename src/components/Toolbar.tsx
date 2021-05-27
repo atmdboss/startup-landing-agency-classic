@@ -26,7 +26,7 @@ const Toolbar = () => {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [handleResize]);
 
   const handleDrawerOpen = () => {
     setIsOpen(true);
