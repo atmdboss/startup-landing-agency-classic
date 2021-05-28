@@ -46,6 +46,7 @@ export const StyledSectionTitle = styled.p`
 `;
 
 export const StyledSectionSubtitle = styled.span`
+  display: block;
   font-size: ${(props) => props.theme.fonts.sm};
   color: ${(props) => props.theme.colors.lightGrey};
   font-weight: 300;

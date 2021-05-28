@@ -116,14 +116,17 @@ export const StyledCoreFeatureSection = styled.div`
   }
 
   .text {
-    h3,
-    p {
-      @media screen and (min-width: 600px) {
-        text-align: left;
-      }
+    text-align: center;
+    @media screen and (min-width: 600px) {
+      text-align: left;
     }
+
     div:last-of-type {
       margin-block-start: 2rem;
+    }
+    .content {
+      margin-block-start: 2rem;
+      margin-block-end: 2rem;
     }
   }
 

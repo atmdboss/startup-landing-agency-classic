@@ -4,6 +4,7 @@ import React from 'react';
 import Header from './components/Header';
 import ProductFeatures from './components/ProductFeatures';
 import CoreFeatures from './components/CoreFeatures';
+import DesignSection from './components/DesignSection';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <ProductFeatures />
       <CoreFeatures />
+      <DesignSection />
     </div>
   );
 }
