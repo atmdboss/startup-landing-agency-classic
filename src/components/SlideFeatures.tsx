@@ -28,7 +28,7 @@ const SlideFeatures = () => {
           <img src={SlideFeature} alt="browser" />
         </FeatureTabContent>
         <FeatureTabContent icon={briefcase} label="Create &amp; adjust">
-          <p>testing</p>
+          <img src={SlideFeature} alt="browser" />
         </FeatureTabContent>
       </FeatureTabs>
     </SectionContainer>
