@@ -2,7 +2,8 @@ import React from 'react';
 
 import SectionContainer from './SectionContainer';
 import Feature from './Feature';
-import { StyledFeatureTitle, StyledFeatureSubtitle, StyledFeatureGrid } from '../styled/feature';
+import { StyledFeatureGrid } from '../styled/feature';
+import { StyledSectionTitle, StyledSectionSubtitle } from '../styled/section';
 //ICONS
 import Modeling from '../assets/icons/feature-modeling.svg';
 import Promotion from '../assets/icons/feature-promotion.svg';
@@ -14,8 +15,8 @@ import Support from '../assets/icons/feature-support.svg';
 const ProductFeatures = () => {
   return (
     <SectionContainer maxWidth="lg">
-      <StyledFeatureTitle>What the features of product</StyledFeatureTitle>
-      <StyledFeatureSubtitle>Features are highlighted here</StyledFeatureSubtitle>
+      <StyledSectionTitle>What the features of product</StyledSectionTitle>
+      <StyledSectionSubtitle>Features are highlighted here</StyledSectionSubtitle>
 
       <StyledFeatureGrid>
         <Feature

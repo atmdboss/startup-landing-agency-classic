@@ -1,4 +1,6 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+import { FeatureGridProps } from '../types';
 
 export const StyledFeatureTitle = styled.p`
   font-size: ${(props) => props.theme.fonts.md};
@@ -21,7 +23,7 @@ export const StyledFeatureSubtitle = styled.span`
   }
 `;
 
-export const StyledFeatureGrid = styled.div`
+export const StyledFeatureGrid = styled.div<FeatureGridProps>`
   display: flex;
   flex-direction: column;
   margin-block-start: 2.5rem;
@@ -30,6 +32,13 @@ export const StyledFeatureGrid = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     margin-block-start: 5rem;
+
+    ${(props) =>
+      props.noRow &&
+      css`
+        flex-direction: column;
+        flex-wrap: nowrap;
+      `}
   }
 `;
 
@@ -96,5 +105,30 @@ export const StyledFeature = styled.div`
         margin-inline-end: 0.5rem;
       }
     }
+  }
+`;
+
+export const StyledCoreFeatureSection = styled.div`
+  .image {
+    img {
+      width: 100%;
+    }
+  }
+
+  .text {
+    h3,
+    p {
+      @media screen and (min-width: 600px) {
+        text-align: left;
+      }
+    }
+    div:last-of-type {
+      margin-block-start: 2rem;
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    display: flex;
+    justify-content: center;
   }
 `;

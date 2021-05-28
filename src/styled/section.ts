@@ -34,3 +34,34 @@ export default styled.section<SectionProps>`
     align-items: center;
   }
 `;
+
+export const StyledSectionTitle = styled.p`
+  font-size: ${(props) => props.theme.fonts.md};
+  font-weight: 500;
+  flex-basis: 100%;
+
+  @media screen and (min-width: 1280px) {
+    font-size: ${(props) => props.theme.fonts.lg};
+  }
+`;
+
+export const StyledSectionSubtitle = styled.span`
+  font-size: ${(props) => props.theme.fonts.sm};
+  color: ${(props) => props.theme.colors.lightGrey};
+  font-weight: 300;
+  flex-basis: 100%;
+
+  @media screen and (min-width: 1280px) {
+    font-size: ${(props) => props.theme.fonts.md};
+  }
+`;
+
+export const StyledSectionHeading = styled.h3`
+  font-size: ${(props) => props.theme.fonts.sm};
+  color: ${(props) => props.theme.colors.violet};
+  font-weight: 500;
+
+  @media screen and (min-width: 1280px) {
+    font-size: ${(props) => props.theme.fonts.md};
+  }
+`;

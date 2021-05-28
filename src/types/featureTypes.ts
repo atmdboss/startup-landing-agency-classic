@@ -4,3 +4,7 @@ export type FeatureProps = {
   description: string;
   more?: string;
 };
+
+export type FeatureGridProps = {
+  noRow?: boolean;
+};

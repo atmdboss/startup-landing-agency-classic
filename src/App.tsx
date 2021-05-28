@@ -3,12 +3,14 @@ import React from 'react';
 
 import Header from './components/Header';
 import ProductFeatures from './components/ProductFeatures';
+import CoreFeatures from './components/CoreFeatures';
 
 function App() {
   return (
     <div className="App">
       <Header />
       <ProductFeatures />
+      <CoreFeatures />
     </div>
   );
 }
