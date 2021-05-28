@@ -7,7 +7,7 @@ export default styled.div`
   position: fixed;
   top: 0;
   z-index: 10;
-  transform: translateX(-100vh);
+  transform: translateX(-100vw);
   transition: transform 0.4s ease-in-out;
   box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 

@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 
 import { FeatureGridProps } from '../types';
+import { show } from './keyframes';
 
 export const StyledFeatureTitle = styled.p`
   font-size: ${(props) => props.theme.fonts.md};
@@ -133,5 +134,92 @@ export const StyledCoreFeatureSection = styled.div`
   @media screen and (min-width: 600px) {
     display: flex;
     justify-content: center;
+  }
+`;
+
+export const StyledFeatureTabs = styled.div`
+  .tab-panes {
+    min-width: 0;
+    overflow-y: hidden;
+    overflow-x: auto;
+
+    & > div {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-block-start: 1rem;
+      margin-block-end: 1rem;
+      margin-inline-start: auto;
+      margin-inline-end: auto;
+      width: 700px;
+
+      & > div {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        &.active,
+        &:hover {
+          &:before {
+            width: 90%;
+          }
+
+          & span {
+            &.icon {
+              svg {
+                path {
+                  fill: ${(props) => props.theme.colors.darkBlue};
+                }
+              }
+            }
+            &.label {
+              color: ${(props) => props.theme.colors.darkBlue};
+            }
+          }
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          width: 0px;
+          bottom: -1rem;
+          height: 1px;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: ${(props) => props.theme.colors.darkBlue};
+          transition: width 0.3s ease-in-out;
+        }
+
+        span {
+          display: inline-block;
+          margin-inline-end: 0.5rem;
+
+          &.icon {
+            svg {
+              path {
+                fill: ${(props) => props.theme.colors.lightGrey};
+              }
+            }
+          }
+
+          &.label {
+            width: max-content;
+            margin-inline-end: 1.5rem;
+            color: ${(props) => props.theme.colors.lightGrey};
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .tab-content {
+    img {
+      animation: ${show} 0.2s linear;
+      width: 100%;
+    }
   }
 `;

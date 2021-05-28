@@ -41,3 +41,12 @@ to {
     
   }
 `;
+
+export const show = keyframes`
+from {
+    transform: scale(0);
+}
+to {
+    transform: scale(1);
+  }
+`;

@@ -5,6 +5,7 @@ import Header from './components/Header';
 import ProductFeatures from './components/ProductFeatures';
 import CoreFeatures from './components/CoreFeatures';
 import DesignSection from './components/DesignSection';
+import SlideFeatures from './components/SlideFeatures';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <ProductFeatures />
       <CoreFeatures />
       <DesignSection />
+      <SlideFeatures />
     </div>
   );
 }
